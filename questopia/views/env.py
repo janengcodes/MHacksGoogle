@@ -46,8 +46,8 @@ def process_question():
     if question:
         if model:
             response = model.generate_content(question)
-            if response:
-                output = response.text
+            output = response.text
+            print(response.text)
 
     quizzy(question, output)
     return flask.render_template("env.html", output_from_flask=output)

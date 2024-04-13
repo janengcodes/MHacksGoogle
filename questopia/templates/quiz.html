@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/index.css">
-    <title>Questopia</title>
+    <title>Questopia Quiz</title>
+    <link rel="stylesheet" href="../static/css/quiz.css">
 </head>
 <body>
+
+<div class="quiz-container">
+    <div class="quiz-title">Questopia Quiz</div>
+
+    <div class="questions">
+        <form action="/completion" method="post">
+            {% for question in questions %}
+                <div class="question">{{ question }}</div>
+                <input type="radio" id="true{{ loop.index }}" name="answer{{ loop.index }}" value="true">
+                <label for="true{{ loop.index }}">True</label>
+                <input type="radio" id="false{{ loop.index }}" name="answer{{ loop.index }}" value="false">
+                <label for="false{{ loop.index }}">False</label><br>
+            {% endfor %}
+            <button type="submit" class="submit-button">Submit Answers</button>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
