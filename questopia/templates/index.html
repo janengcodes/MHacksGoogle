@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>Questopia</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Favorite Character</h1>
+        <div class="buttons">
+            <form action="{{ url_for('show_env_post') }}" method="post">
+                <input type="hidden" name="character" value="Barbie">
+                <button class="barbie">Barbie</button><br>
+            </form>
+            <form action="{{ url_for('show_env_post') }}" method="post">
+                <input type="hidden" name="character" value="Shrek">
+                <button class="shrek">Shrek</button><br>
+            </form>
+            <form action="{{ url_for('show_env_post') }}" method="post">
+                <input type="hidden" name="character" value="Yoda">
+                <button class="yoda">Yoda</button><br>
+            </form>
+            <form action="{{ url_for('show_env_post') }}" method="post">
+                <input type="hidden" name="character" value="Lightning McQueen">
+                <button class="lightning">Lightning McQueen</button><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
