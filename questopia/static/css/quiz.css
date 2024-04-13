@@ -55,7 +55,7 @@ label {
 }
 
 .submit-button {
-    background-color: rgb(238, 165, 82);
+    background-color: rgb(239, 193, 190);
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -67,5 +67,5 @@ label {
 }
 
 .submit-button:hover {
-    background-color: #e99649;
+    background-color: #eea8b8;
 }

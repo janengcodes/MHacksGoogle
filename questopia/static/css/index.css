@@ -6,8 +6,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f9f9f9;
+    background-color: #eae4c3;
+
 }
+
 
 .container {
     text-align: center;
@@ -40,22 +42,22 @@ h1 {
 }
 
 .barbie {
-    background-color: #ff69b4; /* Barbie Pink */
+    background-color: #eb76a2; /* Barbie Pink */
     color: #fff;
 }
 
 .shrek {
-    background-color: #7cb342; /* Shrek Green */
+    background-color: #3fa496; /* Shrek Green */
     color: #fff;
 }
 
 .yoda {
-    background-color: #8bc34a; /* Yoda Green */
+    background-color: #9be7b7; /* Yoda Green */
     color: #fff;
 }
 
 .lightning {
-    background-color: #fbc02d; /* Lightning McQueen Yellow */
+    background-color: #ffbf7a; /* Lightning McQueen Yellow */
     color: #333;
 }
 
