@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `pip install -r requirements.txt`
+### `pip install -q -U google-generativeai`
+### `pip install Flask`
+### `source env/bin/activate`
+### `flask --app questopia --debug run --host 0.0.0.0 --port 8000`
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
