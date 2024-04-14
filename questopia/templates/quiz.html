@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questopia Quiz</title>
     <link rel="stylesheet" href="../static/css/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="quiz-container">
-    <div class="quiz-title">Questopia Quiz</div>
-
+    <div class="quiz-title">Answer these questions to send me to the next quest!</div>
+    <img src="../static/images/cat-removebg-preview.png" class="cat">
     <div class="questions">
         <form action="/completion" method="post">
             {% for question in questions %}
                 <div class="question">{{ question }}</div>
-                <input type="radio" id="true{{ loop.index }}" name="answer{{ loop.index }}" value="true">
+                <input type="radio" id="true{{ loop.index }}" name="answer{{ loop.index }}" value="true" required>
                 <label for="true{{ loop.index }}">True</label>
-                <input type="radio" id="false{{ loop.index }}" name="answer{{ loop.index }}" value="false">
+                <input type="radio" id="false{{ loop.index }}" name="answer{{ loop.index }}" value="false" required>
                 <label for="false{{ loop.index }}">False</label><br>
             {% endfor %}
             <button type="submit" class="submit-button">Submit Answers</button>

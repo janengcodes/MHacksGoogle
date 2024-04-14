@@ -1,12 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #eae4c3;
+    background-image: url('../images/questopia.jpeg'); /* Replace 'background.jpg' with the path to your image */
+    background-size: cover; /* This ensures that the background image covers the entire body */
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
 
 }
 
@@ -25,9 +21,13 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 30%;
+    margin-right: auto;
+    margin-top: 35%;
     max-width: 800px;
     width: 100%;
     flex-wrap: wrap;
+    
 }
 
 .buttons button {
@@ -39,10 +39,11 @@ h1 {
     width: 150px; /* Increased button size */
     height: 150px; /* Increased button size */
     border-radius: 50%; /* Make the button circular */
+    font-family: "Source Code Pro", monospace;
 }
 
 .barbie {
-    background-color: #eb76a2; /* Barbie Pink */
+    background-color: #eb76a2; 
     color: #fff;
 }
 
@@ -52,13 +53,13 @@ h1 {
 }
 
 .yoda {
-    background-color: #9be7b7; /* Yoda Green */
+    background-color: #88b99a; /* Yoda Green */
     color: #fff;
 }
 
 .lightning {
-    background-color: #ffbf7a; /* Lightning McQueen Yellow */
-    color: #333;
+    background-color: #f8b46c; /* Lightning McQueen Yellow */
+    color: #fff;
 }
 
 .buttons button:hover {

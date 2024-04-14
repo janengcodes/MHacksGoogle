@@ -8,6 +8,8 @@ import flask
 import questopia
 from questopia.views.quiz import correct_answers, questions
 
+score = 0.1 
+
 @questopia.app.route('/completion', methods=['POST'])
 def show_results():
     answers = []
@@ -34,6 +36,14 @@ def show_results():
                 "incorrect": wrong_questions
             }
 
+    score = correct/len(correct_answers)
     
     return flask.render_template("completion.html", **context)
+
+@questopia.app.route('/portal')
+def open_portal():
+    context = {}
+    if (score > 0.5):
+        return flask.render_template("open_portal.html", **context)
+    return flask.render_template("closed_portal.html", **context)
 

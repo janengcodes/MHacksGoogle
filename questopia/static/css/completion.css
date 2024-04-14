@@ -1,0 +1,84 @@
+body {
+    font-family: "Source Code Pro", monospace;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: block;
+}
+.button-container {
+    text-align: center; /* Align button to the center */
+    display:block;
+}
+.redo-button {
+    padding: 10px 20px; /* Add padding for button */
+    font-size: 16px; /* Set font size for button text */
+    background-color: rgb(103, 61, 201);
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Set cursor style to pointer */
+    font-family: "Source Code Pro", monospace;
+}
+
+.redo-button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color, change as needed */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}

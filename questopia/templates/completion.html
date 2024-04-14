@@ -3,86 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/completion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <title>Questopia Quiz Results</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
 
-        .container {
-            text-align: center;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .score {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-            color: #333;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f2f2f2;
-        }
-        .back-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff; /* Blue color, change as needed */
-            color: #fff; /* White text color */
-            text-decoration: none; /* Remove underline */
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3; /* Darker blue color on hover */
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Questopia Quiz Results</h1>
+        <h1>Let's see how many keys we got!</h1>
         <div class="score">
-            Total Score: {{correct}} / {{total}}
+            Total Keys: {{correct}} / {{total}}
         </div>
+        {% if correct != total %}
         <table>
             <thead>
                 <tr>
@@ -99,12 +33,16 @@
                 {% endfor %}
             </tbody>
         </table>
+        <br>
+        {%endif%}
     </div>
-    <!-- make the kid retake quiz until they get at least 75%? -->
-    <!-- if they have a good score then show happy cat -->
-    <!-- else show sad cat -->
-    <!-- add redirect back to index -->
-    <a href="/" class="back-button">Redo</a>
+    <br>
+    <div class="button-container">
+        <form action="{{ url_for('portal') }}" method="get">
+            <button type="submit" class="redo-button">Try to access portal</button>
+        </form>
+    </div>
+
    
 </body>
 </html>

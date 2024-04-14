@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <title>Questopia</title>
 </head>
 <body>
     
     <div class="container">
         <!-- insert cat who looks very sad and is in trouble -->
-        <h1>HELP! Catarina the Cat is in Trouble! Select an expert to help you navigate the island to save Catarina.</h1>
+
         <div class="buttons">
             <form action="{{ url_for('show_env_post') }}" method="post">
                 <input type="hidden" name="character" value="Barbie">
