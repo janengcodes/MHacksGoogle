@@ -1,0 +1,10 @@
+body {
+    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/portal-opened.jpeg'); /* Replace 'background.jpg' with the path to your image */
+    background-size: cover; /* This ensures that the background image covers the entire body */
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
+    /* You can add more background properties like background-position, background-color, etc., as needed */
+}
